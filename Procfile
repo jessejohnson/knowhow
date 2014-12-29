@@ -1,0 +1,1 @@
+web: cd project && waitress-serve --port=$PORT project.wsgi:application
