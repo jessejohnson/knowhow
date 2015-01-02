@@ -2,6 +2,18 @@ from django.db import models
 from django.template.defaultfilters import slugify
 import uuid
 
+PAPERS = (
+	('0351/1', 'Human Resource Management Paper I'),
+	('0351/2', 'Human Resource Management Paper II'),
+	('P1011', 'Business Management Paper I'),
+	('P1012', 'Business Management Paper II'),
+)
+
+EXAMS = (
+	('WASSCE', 'West African Senior School Certificate Examination'),
+	('ABCE', 'Advanced Business Certificate Examination'),
+)
+
 # Create your models here.
 class TimeStampedModel(models.Model):
 	"""
@@ -20,9 +32,6 @@ class BaseEntityModel(TimeStampedModel):
 	"""
 
 	name = models.CharField(max_length=128, unique=False, null=True)
-	short_name = models.CharField(max_length=50, unique=False, null=True)
-	image = models.FileField(upload_to='media_uploads', default=None, blank=True, null=True)
-	summary = models.TextField(default=None, blank=True, null=True)
 	slug = models.SlugField(max_length=128, blank=True, null=True)
 
 	def save(self, *args, **kwargs):

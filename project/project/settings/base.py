@@ -44,6 +44,9 @@ DJANGO_APPS = (
 )
 
 LOCAL_APPS = (
+    'apps.core',
+    'apps.questions',
+    'apps.lectures',
 )
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
