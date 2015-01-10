@@ -2,18 +2,6 @@ from django.db import models
 from django.template.defaultfilters import slugify
 import uuid
 
-PAPERS = (
-	('0351/1', 'Human Resource Management Paper I'),
-	('0351/2', 'Human Resource Management Paper II'),
-	('P1011', 'Business Management Paper I'),
-	('P1012', 'Business Management Paper II'),
-)
-
-EXAMS = (
-	('WASSCE', 'West African Senior School Certificate Examination'),
-	('ABCE', 'Advanced Business Certificate Examination'),
-)
-
 # Create your models here.
 class TimeStampedModel(models.Model):
 	"""

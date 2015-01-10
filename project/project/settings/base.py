@@ -43,6 +43,7 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
     
     'rest_framework',
+    'rest_framework.authtoken',
 )
 
 LOCAL_APPS = (
@@ -148,8 +149,9 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
 
 # rest framework
 REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.TokenAuthentication',),
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
-    'PAGINATE_BY':10
+    'PAGINATE_BY':10,
 }
 
 # media variables
