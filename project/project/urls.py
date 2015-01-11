@@ -1,6 +1,10 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from apps.core.api import router
+from rest_framework.authtoken import views
+
+# specific views
+from apps.core.views import SignUpView
 
 urlpatterns = patterns('',
     # Examples:
@@ -10,4 +14,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api-token-auth/', views.obtain_auth_token),
+
+    # specific views
+    url(r'api/signup/', SignUpView.as_view()),
 )

@@ -1,6 +1,19 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 import uuid
+from django.conf import settings
+from django.contrib.auth import get_user_model
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
+
+PAPERS = (
+	('pap1', 'Paper 1'),
+	)
+
+EXAMS = (
+	('ex1', 'exam1'),
+	)
 
 # Create your models here.
 class TimeStampedModel(models.Model):
@@ -33,3 +46,8 @@ class BaseEntityModel(TimeStampedModel):
 
 	class Meta:
 		abstract = True
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+	if created:
+		Token.objects.create(user=instance)

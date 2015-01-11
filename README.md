@@ -7,6 +7,7 @@ Models
 * core
 	* TimeStampedModel
 	* BaseEntityModel
+	* Student
 * lectures
 	* Topic
 	* LearningContent
