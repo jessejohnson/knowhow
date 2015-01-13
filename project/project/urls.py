@@ -5,6 +5,7 @@ from rest_framework.authtoken import views
 
 # specific views
 from apps.core.views import SignUpView
+from apps.tests.views import TakeTestView
 
 urlpatterns = patterns('',
     # Examples:
@@ -18,4 +19,5 @@ urlpatterns = patterns('',
 
     # specific views
     url(r'api/signup/', SignUpView.as_view()),
+    url(r'api/taketest/', TakeTestView.as_view()),
 )
