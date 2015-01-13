@@ -1,5 +1,5 @@
 from django.db import models
-from apps.core.models import TimeStampedModel, PAPERS, EXAMS
+from apps.core.models import TimeStampedModel, Paper, Exam
 
 OPTIONS = (
 	('A', 'Option A'),
@@ -13,8 +13,8 @@ class BaseQuestion(TimeStampedModel):
 	"""
 	Base type for questions containing paper and exam fields
 	"""
-	paper = models.CharField(max_length=128, choices=PAPERS, default=None, blank=True, null=True)
-	exam = models.CharField(max_length=128, choices=EXAMS, default=None, blank=True, null=True)
+	paper = models.ForeignKey('core.Paper', default=None, blank=True, null=True)
+	exam = models.ForeignKey('core.Exam', default=None, blank=True, null=True)
 
 	def __unicode__(self):
 		return "{} - {} - {}" .format(self.exam, self.paper, self.question)

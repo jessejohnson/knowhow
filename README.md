@@ -29,7 +29,7 @@ Models
   * test
   * question
 
-* Student
+* StudentRecord
   * user
   * test
   * grade

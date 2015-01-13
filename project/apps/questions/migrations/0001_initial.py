@@ -7,6 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
+        ('core', '0001_initial'),
     ]
 
     operations = [
@@ -16,9 +17,9 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('paper', models.CharField(default=None, max_length=128, null=True, blank=True, choices=[(b'0351/1', b'Human Resource Management Paper I'), (b'0351/2', b'Human Resource Management Paper II'), (b'P1011', b'Business Management Paper I'), (b'P1012', b'Business Management Paper II')])),
-                ('exam', models.CharField(default=None, max_length=128, null=True, blank=True, choices=[(b'WASSCE', b'West African Senior School Certificate Examination'), (b'ABCE', b'Advanced Business Certificate Examination')])),
                 ('case', models.TextField(default=None, null=True, blank=True)),
+                ('exam', models.ForeignKey(default=None, blank=True, to='core.Exam', null=True)),
+                ('paper', models.ForeignKey(default=None, blank=True, to='core.Paper', null=True)),
             ],
             options={
                 'abstract': False,
@@ -31,8 +32,6 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('paper', models.CharField(default=None, max_length=128, null=True, blank=True, choices=[(b'0351/1', b'Human Resource Management Paper I'), (b'0351/2', b'Human Resource Management Paper II'), (b'P1011', b'Business Management Paper I'), (b'P1012', b'Business Management Paper II')])),
-                ('exam', models.CharField(default=None, max_length=128, null=True, blank=True, choices=[(b'WASSCE', b'West African Senior School Certificate Examination'), (b'ABCE', b'Advanced Business Certificate Examination')])),
                 ('question', models.TextField(default=None, null=True, blank=True)),
             ],
             options={
@@ -52,23 +51,35 @@ class Migration(migrations.Migration):
             bases=('questions.essayquestion',),
         ),
         migrations.CreateModel(
-            name='MCQuestion',
+            name='MultipleChoiceQuestion',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
-                ('paper', models.CharField(default=None, max_length=128, null=True, blank=True, choices=[(b'0351/1', b'Human Resource Management Paper I'), (b'0351/2', b'Human Resource Management Paper II'), (b'P1011', b'Business Management Paper I'), (b'P1012', b'Business Management Paper II')])),
-                ('exam', models.CharField(default=None, max_length=128, null=True, blank=True, choices=[(b'WASSCE', b'West African Senior School Certificate Examination'), (b'ABCE', b'Advanced Business Certificate Examination')])),
                 ('question', models.TextField(default=None, null=True, blank=True)),
                 ('option_a', models.CharField(default=None, max_length=250, null=True, blank=True)),
                 ('option_b', models.CharField(default=None, max_length=250, null=True, blank=True)),
                 ('option_c', models.CharField(default=None, max_length=250, null=True, blank=True)),
                 ('option_d', models.CharField(default=None, max_length=250, null=True, blank=True)),
                 ('answer', models.CharField(default=None, max_length=3, null=True, blank=True, choices=[(b'A', b'Option A'), (b'B', b'Option B'), (b'C', b'Option C'), (b'D', b'Option D')])),
+                ('exam', models.ForeignKey(default=None, blank=True, to='core.Exam', null=True)),
+                ('paper', models.ForeignKey(default=None, blank=True, to='core.Paper', null=True)),
             ],
             options={
                 'abstract': False,
             },
             bases=(models.Model,),
+        ),
+        migrations.AddField(
+            model_name='essayquestion',
+            name='exam',
+            field=models.ForeignKey(default=None, blank=True, to='core.Exam', null=True),
+            preserve_default=True,
+        ),
+        migrations.AddField(
+            model_name='essayquestion',
+            name='paper',
+            field=models.ForeignKey(default=None, blank=True, to='core.Paper', null=True),
+            preserve_default=True,
         ),
     ]

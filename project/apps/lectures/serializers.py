@@ -1,14 +1,8 @@
 from rest_framework import serializers
-from .models import LearningContent, Topic
+from .models import LearningResource
 
-class LearningContentSerializer(serializers.HyperlinkedModelSerializer):
-
-	class Meta:
-		model = LearningContent
-		fields = ('link', 'topic' ,'summary', 'name', 'slug',)
-
-class TopicSerializer(serializers.HyperlinkedModelSerializer):
+class LearningResourceSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
-		model = Topic
-		fields = ('summary', 'name', 'slug',)
+		model = LearningResource
+		fields = ('url', 'link', 'topic' ,'summary', 'name', 'slug',)

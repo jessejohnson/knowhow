@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import LearningContent, Topic
+from .models import LearningResource
 
 # Register your models here.
-admin.site.register(LearningContent)
-admin.site.register(Topic)
+admin.site.register(LearningResource)

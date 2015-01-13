@@ -1,10 +1,11 @@
 from django.contrib.auth.models import User
 from rest_framework import viewsets, generics
 from rest_framework.views import APIView
-from rest_framework.permissions import AllowAny, IsAdminUser
+from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 
-from .serializers import UserSerializer
+from .serializers import UserSerializer, TopicSerializer, ExamSerializer, PaperSerializer
+from .models import Topic, Exam, Paper
 from .permissions import IsUserOrReadOnly
 
 # Create your views here.
@@ -24,6 +25,20 @@ class SignUpView(generics.CreateAPIView):
 	serializer_class = UserSerializer
 	permission_classes = (AllowAny,)
 
+class TopicViewSet(viewsets.ModelViewSet):
+	queryset = Topic.objects.all()
+	serializer_class = TopicSerializer
+	permission_classes = (IsAuthenticatedOrReadOnly,)
+
+class ExamViewSet(viewsets.ModelViewSet):
+	queryset = Exam.objects.all()
+	serializer_class = ExamSerializer
+	permission_classes = (IsAuthenticatedOrReadOnly,)
+
+class PaperViewSet(viewsets.ModelViewSet):
+	queryset = Paper.objects.all()
+	serializer_class = PaperSerializer
+	permission_classes = (IsAuthenticatedOrReadOnly,)
 
 # class UserSignUpViewSet(viewsets.ViewSet):
 # 	"""
