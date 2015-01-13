@@ -7,33 +7,33 @@ Tests may be based on a specific topic or may be an actual past question exam.
 
 Models
 -----
-*Exam
-	*exam name
+* Exam
+  * exam name
 
-*Paper
-	*paper name
+* Paper
+  * paper name
 
-*Topic
-	*topic name
+* Topic
+  * topic name
 
-*Question
-	*question
-	*options a-e
+* Question
+  * question
+  * options a-e
 
-*Test
-	*exam
-	*paper
-	*topic (optional or general)
+* Test
+  * exam
+  * paper
+  * topic (optional or general)
 
-*Test-Question-Table
-	*test
-	*question
+* Test-Question-Table
+  * test
+  * question
 
-*Student
-	*user
-	*test
-	*grade
+* Student
+  * user
+  * test
+  * grade
 
-*LearningResource
-	*title
-	*resourcelink
+* LearningResource
+  * title
+  * resourcelink
