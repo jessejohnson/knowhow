@@ -5,4 +5,4 @@ class LearningResourceSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = LearningResource
-		fields = ('url', 'link', 'topic' ,'summary', 'name', 'slug',)
+		fields = ('id', 'url', 'link', 'topic' ,'summary', 'name', 'slug',)

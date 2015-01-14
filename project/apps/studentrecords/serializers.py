@@ -5,4 +5,4 @@ class StudentRecordSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = StudentRecord
-		fields = ('url', 'user', 'test' ,'grade', 'name', 'slug',)
+		fields = ('id', 'url', 'user', 'test' ,'grade', 'name', 'slug',)
