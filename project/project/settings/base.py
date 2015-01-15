@@ -44,6 +44,7 @@ DJANGO_APPS = (
     
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
 )
 
 LOCAL_APPS = (
@@ -58,6 +59,7 @@ INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -162,6 +164,10 @@ REST_FRAMEWORK = {
          ),
     'PAGINATE_BY':10,
 }
+
+# CORS headers setings
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = ()
 
 # media variables
 MEDIA_URL = '/media/'

@@ -21,7 +21,7 @@ class TakeTestView(generics.ListAPIView):
 	"""
 	Loads a test for a student to take
 	"""
-	permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+	permission_classes = (permissions.IsAuthenticated,)
 	serializer_class = TestTableSerializer
 
 	def get_queryset(self):
