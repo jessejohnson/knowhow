@@ -10,12 +10,12 @@ from .serializers import TestTableSerializer, TestSerializer
 class TestViewSet(viewsets.ModelViewSet):
 	queryset = Test.objects.all()
 	serializer_class = TestSerializer
-	permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+	permission_classes = (permissions.IsAuthenticated,)
 
 class TestTableViewSet(viewsets.ModelViewSet):
 	queryset = TestTable.objects.all()
 	serializer_class = TestTableSerializer
-	permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+	permission_classes = (permissions.IsAuthenticated,)
 
 class TakeTestView(generics.ListAPIView):
 	"""

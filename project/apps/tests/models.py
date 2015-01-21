@@ -4,7 +4,7 @@ from apps.core.models import BaseEntityModel, TimeStampedModel
 
 # Create your models here.
 class Test(BaseEntityModel):
-	exam = models.ForeignKey('core.Exam', default=None, blank=True, null=True)
+	exam = models.ForeignKey('core.Exam', default=None, blank=True, null=True, related_name='test_exam')
 	paper = models.ForeignKey('core.Paper', default=None, blank=True, null=True)
 	topic = models.ForeignKey('core.Topic', default=None, blank=True, null=True)
 

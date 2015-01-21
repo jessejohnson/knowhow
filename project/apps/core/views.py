@@ -1,7 +1,8 @@
 from django.contrib.auth.models import User
+from django.shortcuts import get_object_or_404
 from rest_framework import viewsets, generics
 from rest_framework.views import APIView
-from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticatedOrReadOnly
+from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticatedOrReadOnly, IsAuthenticated
 from rest_framework.response import Response
 
 from .serializers import UserSerializer, TopicSerializer, ExamSerializer, PaperSerializer
@@ -24,6 +25,20 @@ class SignUpView(generics.CreateAPIView):
 	queryset = User.objects.all()
 	serializer_class = UserSerializer
 	permission_classes = (AllowAny,)
+
+class GetUserView(generics.RetrieveAPIView):
+	"""
+	Get a single user instance based on username
+	"""
+	queryset = User.objects.all()
+	serializer_class = UserSerializer
+	permission_classes = (IsAuthenticated,)
+
+	def get_object(self):
+		queryset = self.get_queryset()
+		username = self.request.query_params.get('username')
+		user = get_object_or_404(queryset, username=username)
+		return user
 
 class TopicViewSet(viewsets.ModelViewSet):
 	queryset = Topic.objects.all()
