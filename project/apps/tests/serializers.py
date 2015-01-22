@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from apps.questions.serializers import MultipleChoiceQuestionSerializer
 from apps.core.serializers import ExamSerializer, TopicSerializer, PaperSerializer
-from .models import Test, TestTable
+from .models import Test, TestQuestionTable
 
 class TestSerializer(serializers.HyperlinkedModelSerializer):	
 	exam = ExamSerializer(many=False, read_only=True)
@@ -12,9 +12,9 @@ class TestSerializer(serializers.HyperlinkedModelSerializer):
 		model = Test
 		fields = ('id', 'url', 'exam', 'topic' ,'paper', 'name', 'slug',)
 
-class TestTableSerializer(serializers.HyperlinkedModelSerializer):
+class TestQuestionTableSerializer(serializers.HyperlinkedModelSerializer):
 	question = MultipleChoiceQuestionSerializer(many=False, read_only=True)
 
 	class Meta:
-		model = TestTable
+		model = TestQuestionTable
 		fields = ('id', 'url', 'test', 'question' ,'question_number', 'name', 'slug',)

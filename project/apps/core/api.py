@@ -3,7 +3,7 @@ from .views import UserViewSet, TopicViewSet, ExamViewSet, PaperViewSet
 from apps.lectures.views import LearningResourceViewSet
 from apps.questions.views import EssayQuestionViewSet, MultipleChoiceQuestionViewSet, CaseStudyViewSet, CaseStudyQuestionViewSet
 from apps.studentrecords.views import StudentRecordViewSet
-from apps.tests.views import TestViewSet, TestTableViewSet
+from apps.tests.views import TestViewSet, TestQuestionTableViewSet
 
 router = routers.DefaultRouter()
 # router.register(r'signup', UserSignUpViewSet)
@@ -18,4 +18,4 @@ router.register(r'cases', CaseStudyViewSet)
 router.register(r'casesqs',CaseStudyQuestionViewSet)
 router.register(r'studentrecords',StudentRecordViewSet)
 router.register(r'tests',TestViewSet)
-router.register(r'testtables',TestTableViewSet)
+router.register(r'testtables',TestQuestionTableViewSet)

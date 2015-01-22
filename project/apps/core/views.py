@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from rest_framework import viewsets, generics
 from rest_framework.views import APIView
@@ -6,7 +6,7 @@ from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticatedOrR
 from rest_framework.response import Response
 
 from .serializers import UserSerializer, TopicSerializer, ExamSerializer, PaperSerializer
-from .models import Topic, Exam, Paper
+from .models import Topic, Exam, Paper, User
 from .permissions import IsUserOrReadOnly
 
 # Create your views here.

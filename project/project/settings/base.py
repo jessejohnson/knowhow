@@ -83,6 +83,9 @@ DATABASES = {
     }
 }
 
+# Custom user model
+AUTH_USER_MODEL = 'core.User'
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 

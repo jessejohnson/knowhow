@@ -37,6 +37,7 @@ class MultipleChoiceQuestion(BaseQuestion):
 	option_b = models.CharField(max_length=250, default=None, blank=True, null=True)
 	option_c = models.CharField(max_length=250, default=None, blank=True, null=True)
 	option_d = models.CharField(max_length=250, default=None, blank=True, null=True)
+	option_e = models.CharField(max_length=250, default=None, blank=True, null=True)
 	answer = models.CharField(max_length=3, choices=OPTIONS, default=None, blank=True, null=True)
 		
 class CaseStudy(BaseQuestion):

@@ -18,7 +18,6 @@ class Migration(migrations.Migration):
                 ('created', models.DateTimeField(auto_now_add=True)),
                 ('modified', models.DateTimeField(auto_now=True)),
                 ('name', models.CharField(max_length=128, null=True)),
-                ('slug', models.SlugField(max_length=128, null=True, blank=True)),
                 ('link', models.URLField(default=None, null=True, blank=True)),
                 ('summary', models.TextField(default=None, null=True, blank=True)),
                 ('topic', models.ForeignKey(default=None, blank=True, to='core.Topic', null=True)),

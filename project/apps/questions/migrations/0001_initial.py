@@ -61,6 +61,7 @@ class Migration(migrations.Migration):
                 ('option_b', models.CharField(default=None, max_length=250, null=True, blank=True)),
                 ('option_c', models.CharField(default=None, max_length=250, null=True, blank=True)),
                 ('option_d', models.CharField(default=None, max_length=250, null=True, blank=True)),
+                ('option_e', models.CharField(default=None, max_length=250, null=True, blank=True)),
                 ('answer', models.CharField(default=None, max_length=3, null=True, blank=True, choices=[(b'A', b'Option A'), (b'B', b'Option B'), (b'C', b'Option C'), (b'D', b'Option D')])),
                 ('exam', models.ForeignKey(default=None, blank=True, to='core.Exam', null=True)),
                 ('paper', models.ForeignKey(default=None, blank=True, to='core.Paper', null=True)),
