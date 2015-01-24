@@ -3,6 +3,6 @@ from .models import MultipleChoiceQuestion, EssayQuestion, CaseStudy, CaseStudyQ
 
 # Register your models here.
 admin.site.register(MultipleChoiceQuestion)
-admin.site.register(EssayQuestion)
-admin.site.register(CaseStudy)
-admin.site.register(CaseStudyQuestion)
+# admin.site.register(EssayQuestion)
+# admin.site.register(CaseStudy)
+# admin.site.register(CaseStudyQuestion)

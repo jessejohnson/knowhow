@@ -1,7 +1,5 @@
 from rest_framework import serializers
-from django.contrib.auth.models import User
-from rest_framework.authtoken.models import Token
-from .models import Topic, Exam, Paper
+from .models import Topic, Exam, Paper, User
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
 
@@ -13,23 +11,23 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 	
 	class Meta:
 		model = User
-		fields = ('id', 'url', 'username', 'email', 'groups', 'password',)
+		fields = ('id', 'url', 'username', 'email', 'password', 'avatar')
 		write_only_fields = ('password',)
 
 class TopicSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = Topic
-		fields = ('id', 'url', 'name', 'slug', 'summary',)
+		fields = ('id', 'url', 'name',)
 
 class ExamSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = Exam
-		fields = ('id', 'url', 'name', 'slug', 'summary', 'short_name',)
+		fields = ('id', 'url', 'name', 'short_name',)
 
 class PaperSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = Paper
-		fields = ('id', 'url', 'name', 'slug', 'summary', 'code',)
+		fields = ('id', 'url', 'name', 'code',)

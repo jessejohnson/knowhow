@@ -11,3 +11,6 @@ class LearningResource(TimeStampedModel):
 	link = models.URLField(default=None, blank=True, null=True)
 	topic = models.ForeignKey('core.Topic', default=None, blank=True, null=True)
 	summary = models.TextField(default=None, blank=True, null=True)
+
+	def __unicode__(self):
+		return "{} - {}".format(self.topic.name, self.name)

@@ -5,7 +5,7 @@ from rest_framework import generics
 from rest_framework.decorators import detail_route
 from rest_framework.views import APIView
 from .models import Test, TestQuestionTable
-from .serializers import TestQuestionTableSerializer, TestSerializer
+from .serializers import TestQuestionTableSerializer, TestSerializer, TakeTestSerializer
 
 class TestViewSet(viewsets.ModelViewSet):
 	queryset = Test.objects.all()
@@ -17,18 +17,22 @@ class TestQuestionTableViewSet(viewsets.ModelViewSet):
 	serializer_class = TestQuestionTableSerializer
 	permission_classes = (permissions.IsAuthenticated,)
 
-class TakeTestView(generics.ListAPIView):
+class TakeTestView(generics.RetrieveAPIView):
 	"""
 	Loads a test for a student to take
 	"""
 	permission_classes = (permissions.IsAuthenticated,)
-	serializer_class = TestQuestionTableSerializer
+	serializer_class = TakeTestSerializer
 
 	def get_queryset(self):
 		"""
 		Retrieve all the questions belonging to a specific test
 		provided by the param test_id in order
 		"""
-		test_id = self.request.query_params.get('test_id', None)
-		queryset = TestQuestionTable.objects.filter(test_id=test_id).order_by("question_number")
-		return queryset
+		queryset = self.get_queryset()
+		email = self.request.query_params.get('email')
+		test = get_object_or_404(queryset, email=email)
+		return test
+		# test_id = self.request.query_params.get('test_id', None)
+		# queryset = TestQuestionTable.objects.filter(test_id=test_id).order_by("question_number")
+		# return queryset

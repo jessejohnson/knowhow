@@ -45,6 +45,7 @@ DJANGO_APPS = (
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'storages',
 )
 
 LOCAL_APPS = (
@@ -121,7 +122,7 @@ TEMPLATE_DIRS = (
 # Django Suit configuration example
 SUIT_CONFIG = {
     # header
-    'ADMIN_NAME': 'Project KnowHow Admin',
+    'ADMIN_NAME': 'PrepGH Admin',
     'HEADER_DATE_FORMAT': 'l, j. F Y',
     'HEADER_TIME_FORMAT': 'H:i',
 
@@ -164,6 +165,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAdminUser',
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        'rest_framework.permissions.IsAuthenticated',
          ),
     'PAGINATE_BY':10,
 }
@@ -182,5 +184,5 @@ AWS_S3_SECURE_URLS = False
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = os.environ['S3_BUCKET_NAME']
-MEDIA_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+MEDIA_URL = 'http://%s.s3.amazonaws.com/prepgh/' % AWS_STORAGE_BUCKET_NAME
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto.S3BotoStorage"

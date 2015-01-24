@@ -1,0 +1,1179 @@
+[
+{
+    "fields": {
+        "model": "logentry",
+        "name": "log entry",
+        "app_label": "admin"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 1
+},
+{
+    "fields": {
+        "model": "permission",
+        "name": "permission",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 2
+},
+{
+    "fields": {
+        "model": "group",
+        "name": "group",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 3
+},
+{
+    "fields": {
+        "model": "contenttype",
+        "name": "content type",
+        "app_label": "contenttypes"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 4
+},
+{
+    "fields": {
+        "model": "session",
+        "name": "session",
+        "app_label": "sessions"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 5
+},
+{
+    "fields": {
+        "model": "token",
+        "name": "token",
+        "app_label": "authtoken"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 6
+},
+{
+    "fields": {
+        "model": "corsmodel",
+        "name": "cors model",
+        "app_label": "corsheaders"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 7
+},
+{
+    "fields": {
+        "model": "topic",
+        "name": "topic",
+        "app_label": "core"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 8
+},
+{
+    "fields": {
+        "model": "exam",
+        "name": "exam",
+        "app_label": "core"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 9
+},
+{
+    "fields": {
+        "model": "paper",
+        "name": "paper",
+        "app_label": "core"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 10
+},
+{
+    "fields": {
+        "model": "user",
+        "name": "user",
+        "app_label": "core"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 11
+},
+{
+    "fields": {
+        "model": "essayquestion",
+        "name": "essay question",
+        "app_label": "questions"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 12
+},
+{
+    "fields": {
+        "model": "multiplechoicequestion",
+        "name": "multiple choice question",
+        "app_label": "questions"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 13
+},
+{
+    "fields": {
+        "model": "casestudy",
+        "name": "case study",
+        "app_label": "questions"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 14
+},
+{
+    "fields": {
+        "model": "casestudyquestion",
+        "name": "case study question",
+        "app_label": "questions"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 15
+},
+{
+    "fields": {
+        "model": "learningresource",
+        "name": "learning resource",
+        "app_label": "lectures"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 16
+},
+{
+    "fields": {
+        "model": "studentrecord",
+        "name": "student record",
+        "app_label": "studentrecords"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 17
+},
+{
+    "fields": {
+        "model": "test",
+        "name": "test",
+        "app_label": "tests"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 18
+},
+{
+    "fields": {
+        "model": "testquestiontable",
+        "name": "test question table",
+        "app_label": "tests"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 19
+},
+{
+    "fields": {
+        "expire_date": "2015-02-05T13:32:27.062Z",
+        "session_data": "ODg3NWVhMGEwYjNiOWVjMGZiYWQxZDhhOTU5YTQ3MGVhODhhYTk2Mjp7Il9hdXRoX3VzZXJfaGFzaCI6ImViYTBjMjI5NGQ0OGM5YzU0ZDQwNGM2MGNhNTQzZjA3OTM0MmI3MzgiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+    },
+    "model": "sessions.session",
+    "pk": "kj3z13l2fw6yhuwqrm83qk46iqpproj0"
+},
+{
+    "fields": {
+        "modified": "2015-01-22T14:19:47.243Z",
+        "name": "General Topic",
+        "created": "2015-01-22T14:19:47.243Z"
+    },
+    "model": "core.topic",
+    "pk": 1
+},
+{
+    "fields": {
+        "modified": "2015-01-22T15:05:54.698Z",
+        "name": "Literature in English",
+        "created": "2015-01-22T15:00:19.283Z"
+    },
+    "model": "core.topic",
+    "pk": 2
+},
+{
+    "fields": {
+        "short_name": "WASSCE",
+        "modified": "2015-01-22T14:20:13.861Z",
+        "name": "West African Senior Secondary Certificate Exam",
+        "created": "2015-01-22T14:20:13.861Z"
+    },
+    "model": "core.exam",
+    "pk": 1
+},
+{
+    "fields": {
+        "code": "P3021",
+        "modified": "2015-01-22T14:35:07.498Z",
+        "name": "Core English ",
+        "created": "2015-01-22T14:35:07.498Z"
+    },
+    "model": "core.paper",
+    "pk": 1
+},
+{
+    "fields": {
+        "username": "wsgeorge",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "last_login": "2015-01-22T13:32:27Z",
+        "avatar": "media_uploads/myprofile.jpg",
+        "is_admin": true,
+        "password": "pbkdf2_sha256$12000$A53TzN5JuEoX$t687AGJ6MCsrTjPIG/9G5DQSpf+Pqp/pWG+XlMPxq/g=",
+        "email": "williamsaintgeorge@gmail.com"
+    },
+    "model": "core.user",
+    "pk": 1
+},
+{
+    "fields": {
+        "username": "natsnr",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "last_login": "2015-01-22T13:49:58Z",
+        "avatar": "media_uploads/jsIsCrazierThanEnglish.png",
+        "is_admin": false,
+        "password": "pbkdf2_sha256$12000$VC94T2VxpVCE$/scFNFuzP2aGH7BU0mLg/SAhBbFSgjynLQO7jIWBms0=",
+        "email": "natsnr@gmail.com"
+    },
+    "model": "core.user",
+    "pk": 2
+},
+{
+    "fields": {
+        "username": "jesse",
+        "first_name": "Jesse",
+        "last_name": "Johnson",
+        "is_active": true,
+        "last_login": "2015-01-22T14:04:30Z",
+        "avatar": "media_uploads/A8cBt8c.jpg",
+        "is_admin": false,
+        "password": "pbkdf2_sha256$12000$B4ReKjp9klEB$ygV/h1ei4K2oM1QKJ07ZexO16Ldx8b1mXPlZnKLxJYY=",
+        "email": "jesse@gmail.com"
+    },
+    "model": "core.user",
+    "pk": 3
+},
+{
+    "fields": {
+        "exam": 1,
+        "created": "2015-01-22T14:55:45.631Z",
+        "option_b": "fable",
+        "option_c": "limerick",
+        "option_a": "panegyric",
+        "question": "A story in which animals are used as characters is a",
+        "modified": "2015-01-22T14:55:45.631Z",
+        "option_d": "tale",
+        "option_e": "",
+        "paper": 1,
+        "answer": "B"
+    },
+    "model": "questions.multiplechoicequestion",
+    "pk": 1
+},
+{
+    "fields": {
+        "exam": 1,
+        "created": "2015-01-22T14:56:59.383Z",
+        "option_b": "epigram",
+        "option_c": "anecdote",
+        "option_a": "epithet",
+        "question": "A short, witty statement in verse or prose is an",
+        "modified": "2015-01-22T14:56:59.383Z",
+        "option_d": "epitaph",
+        "option_e": "",
+        "paper": 1,
+        "answer": "C"
+    },
+    "model": "questions.multiplechoicequestion",
+    "pk": 2
+},
+{
+    "fields": {
+        "exam": 1,
+        "created": "2015-01-22T14:57:43.254Z",
+        "option_b": "audition",
+        "option_c": "premiere",
+        "option_a": "rehearsal",
+        "question": "The first public performance of a play is its",
+        "modified": "2015-01-22T14:57:43.254Z",
+        "option_d": "debut",
+        "option_e": "",
+        "paper": 1,
+        "answer": "C"
+    },
+    "model": "questions.multiplechoicequestion",
+    "pk": 3
+},
+{
+    "fields": {
+        "exam": 1,
+        "created": "2015-01-22T14:58:46.439Z",
+        "option_b": "a sonnet",
+        "option_c": "an ode",
+        "option_a": "a lullaby",
+        "question": "A short song like poem is",
+        "modified": "2015-01-22T14:58:46.439Z",
+        "option_d": "a lyric",
+        "option_e": "",
+        "paper": 1,
+        "answer": "B"
+    },
+    "model": "questions.multiplechoicequestion",
+    "pk": 4
+},
+{
+    "fields": {
+        "exam": 1,
+        "created": "2015-01-22T14:59:37.481Z",
+        "option_b": "plot",
+        "option_c": "dialogue",
+        "option_a": "scene",
+        "question": "One of the elements essential to a novel is",
+        "modified": "2015-01-22T14:59:37.481Z",
+        "option_d": "chorus",
+        "option_e": "",
+        "paper": 1,
+        "answer": "B"
+    },
+    "model": "questions.multiplechoicequestion",
+    "pk": 5
+},
+{
+    "fields": {
+        "exam": 1,
+        "created": "2015-01-22T15:01:01.676Z",
+        "modified": "2015-01-22T15:01:01.676Z",
+        "topic": 2,
+        "paper": 1,
+        "name": "2014 Core English"
+    },
+    "model": "tests.test",
+    "pk": 2
+},
+{
+    "fields": {
+        "name": "2014 Core English 1",
+        "created": "2015-01-22T15:02:57.430Z",
+        "question": 1,
+        "modified": "2015-01-22T15:02:57.430Z",
+        "question_number": 1,
+        "test": 2
+    },
+    "model": "tests.testquestiontable",
+    "pk": 1
+},
+{
+    "fields": {
+        "name": "2014 Core English 2",
+        "created": "2015-01-22T15:03:06.783Z",
+        "question": 2,
+        "modified": "2015-01-22T15:03:06.783Z",
+        "question_number": 2,
+        "test": 2
+    },
+    "model": "tests.testquestiontable",
+    "pk": 2
+},
+{
+    "fields": {
+        "name": "2014 Core English 3",
+        "created": "2015-01-22T15:03:16.228Z",
+        "question": 3,
+        "modified": "2015-01-22T15:03:16.228Z",
+        "question_number": 3,
+        "test": 2
+    },
+    "model": "tests.testquestiontable",
+    "pk": 3
+},
+{
+    "fields": {
+        "name": "2014 Core English 4",
+        "created": "2015-01-22T15:03:26.015Z",
+        "question": 4,
+        "modified": "2015-01-22T15:03:26.015Z",
+        "question_number": 4,
+        "test": 2
+    },
+    "model": "tests.testquestiontable",
+    "pk": 4
+},
+{
+    "fields": {
+        "name": "2014 Core English 5",
+        "created": "2015-01-22T15:03:42.975Z",
+        "question": 5,
+        "modified": "2015-01-22T15:03:42.975Z",
+        "question_number": 5,
+        "test": 2
+    },
+    "model": "tests.testquestiontable",
+    "pk": 5
+},
+{
+    "fields": {
+        "user": 3,
+        "created": "2015-01-22T14:04:30.085Z"
+    },
+    "model": "authtoken.token",
+    "pk": "530a364769354cc174cf3e253cf3fa58b7be3c07"
+},
+{
+    "fields": {
+        "user": 1,
+        "created": "2015-01-22T13:30:22.268Z"
+    },
+    "model": "authtoken.token",
+    "pk": "903e01e941e4c825227613b45d26b4a3e1823dcc"
+},
+{
+    "fields": {
+        "user": 2,
+        "created": "2015-01-22T13:49:58.346Z"
+    },
+    "model": "authtoken.token",
+    "pk": "df50d6104c2a9757384c4335550cdea2a59ada23"
+},
+{
+    "fields": {
+        "codename": "add_logentry",
+        "name": "Can add log entry",
+        "content_type": 1
+    },
+    "model": "auth.permission",
+    "pk": 1
+},
+{
+    "fields": {
+        "codename": "change_logentry",
+        "name": "Can change log entry",
+        "content_type": 1
+    },
+    "model": "auth.permission",
+    "pk": 2
+},
+{
+    "fields": {
+        "codename": "delete_logentry",
+        "name": "Can delete log entry",
+        "content_type": 1
+    },
+    "model": "auth.permission",
+    "pk": 3
+},
+{
+    "fields": {
+        "codename": "add_permission",
+        "name": "Can add permission",
+        "content_type": 2
+    },
+    "model": "auth.permission",
+    "pk": 4
+},
+{
+    "fields": {
+        "codename": "change_permission",
+        "name": "Can change permission",
+        "content_type": 2
+    },
+    "model": "auth.permission",
+    "pk": 5
+},
+{
+    "fields": {
+        "codename": "delete_permission",
+        "name": "Can delete permission",
+        "content_type": 2
+    },
+    "model": "auth.permission",
+    "pk": 6
+},
+{
+    "fields": {
+        "codename": "add_group",
+        "name": "Can add group",
+        "content_type": 3
+    },
+    "model": "auth.permission",
+    "pk": 7
+},
+{
+    "fields": {
+        "codename": "change_group",
+        "name": "Can change group",
+        "content_type": 3
+    },
+    "model": "auth.permission",
+    "pk": 8
+},
+{
+    "fields": {
+        "codename": "delete_group",
+        "name": "Can delete group",
+        "content_type": 3
+    },
+    "model": "auth.permission",
+    "pk": 9
+},
+{
+    "fields": {
+        "codename": "add_contenttype",
+        "name": "Can add content type",
+        "content_type": 4
+    },
+    "model": "auth.permission",
+    "pk": 10
+},
+{
+    "fields": {
+        "codename": "change_contenttype",
+        "name": "Can change content type",
+        "content_type": 4
+    },
+    "model": "auth.permission",
+    "pk": 11
+},
+{
+    "fields": {
+        "codename": "delete_contenttype",
+        "name": "Can delete content type",
+        "content_type": 4
+    },
+    "model": "auth.permission",
+    "pk": 12
+},
+{
+    "fields": {
+        "codename": "add_session",
+        "name": "Can add session",
+        "content_type": 5
+    },
+    "model": "auth.permission",
+    "pk": 13
+},
+{
+    "fields": {
+        "codename": "change_session",
+        "name": "Can change session",
+        "content_type": 5
+    },
+    "model": "auth.permission",
+    "pk": 14
+},
+{
+    "fields": {
+        "codename": "delete_session",
+        "name": "Can delete session",
+        "content_type": 5
+    },
+    "model": "auth.permission",
+    "pk": 15
+},
+{
+    "fields": {
+        "codename": "add_token",
+        "name": "Can add token",
+        "content_type": 6
+    },
+    "model": "auth.permission",
+    "pk": 16
+},
+{
+    "fields": {
+        "codename": "change_token",
+        "name": "Can change token",
+        "content_type": 6
+    },
+    "model": "auth.permission",
+    "pk": 17
+},
+{
+    "fields": {
+        "codename": "delete_token",
+        "name": "Can delete token",
+        "content_type": 6
+    },
+    "model": "auth.permission",
+    "pk": 18
+},
+{
+    "fields": {
+        "codename": "add_corsmodel",
+        "name": "Can add cors model",
+        "content_type": 7
+    },
+    "model": "auth.permission",
+    "pk": 19
+},
+{
+    "fields": {
+        "codename": "change_corsmodel",
+        "name": "Can change cors model",
+        "content_type": 7
+    },
+    "model": "auth.permission",
+    "pk": 20
+},
+{
+    "fields": {
+        "codename": "delete_corsmodel",
+        "name": "Can delete cors model",
+        "content_type": 7
+    },
+    "model": "auth.permission",
+    "pk": 21
+},
+{
+    "fields": {
+        "codename": "add_topic",
+        "name": "Can add topic",
+        "content_type": 8
+    },
+    "model": "auth.permission",
+    "pk": 22
+},
+{
+    "fields": {
+        "codename": "change_topic",
+        "name": "Can change topic",
+        "content_type": 8
+    },
+    "model": "auth.permission",
+    "pk": 23
+},
+{
+    "fields": {
+        "codename": "delete_topic",
+        "name": "Can delete topic",
+        "content_type": 8
+    },
+    "model": "auth.permission",
+    "pk": 24
+},
+{
+    "fields": {
+        "codename": "add_exam",
+        "name": "Can add exam",
+        "content_type": 9
+    },
+    "model": "auth.permission",
+    "pk": 25
+},
+{
+    "fields": {
+        "codename": "change_exam",
+        "name": "Can change exam",
+        "content_type": 9
+    },
+    "model": "auth.permission",
+    "pk": 26
+},
+{
+    "fields": {
+        "codename": "delete_exam",
+        "name": "Can delete exam",
+        "content_type": 9
+    },
+    "model": "auth.permission",
+    "pk": 27
+},
+{
+    "fields": {
+        "codename": "add_paper",
+        "name": "Can add paper",
+        "content_type": 10
+    },
+    "model": "auth.permission",
+    "pk": 28
+},
+{
+    "fields": {
+        "codename": "change_paper",
+        "name": "Can change paper",
+        "content_type": 10
+    },
+    "model": "auth.permission",
+    "pk": 29
+},
+{
+    "fields": {
+        "codename": "delete_paper",
+        "name": "Can delete paper",
+        "content_type": 10
+    },
+    "model": "auth.permission",
+    "pk": 30
+},
+{
+    "fields": {
+        "codename": "add_user",
+        "name": "Can add user",
+        "content_type": 11
+    },
+    "model": "auth.permission",
+    "pk": 31
+},
+{
+    "fields": {
+        "codename": "change_user",
+        "name": "Can change user",
+        "content_type": 11
+    },
+    "model": "auth.permission",
+    "pk": 32
+},
+{
+    "fields": {
+        "codename": "delete_user",
+        "name": "Can delete user",
+        "content_type": 11
+    },
+    "model": "auth.permission",
+    "pk": 33
+},
+{
+    "fields": {
+        "codename": "add_essayquestion",
+        "name": "Can add essay question",
+        "content_type": 12
+    },
+    "model": "auth.permission",
+    "pk": 34
+},
+{
+    "fields": {
+        "codename": "change_essayquestion",
+        "name": "Can change essay question",
+        "content_type": 12
+    },
+    "model": "auth.permission",
+    "pk": 35
+},
+{
+    "fields": {
+        "codename": "delete_essayquestion",
+        "name": "Can delete essay question",
+        "content_type": 12
+    },
+    "model": "auth.permission",
+    "pk": 36
+},
+{
+    "fields": {
+        "codename": "add_multiplechoicequestion",
+        "name": "Can add multiple choice question",
+        "content_type": 13
+    },
+    "model": "auth.permission",
+    "pk": 37
+},
+{
+    "fields": {
+        "codename": "change_multiplechoicequestion",
+        "name": "Can change multiple choice question",
+        "content_type": 13
+    },
+    "model": "auth.permission",
+    "pk": 38
+},
+{
+    "fields": {
+        "codename": "delete_multiplechoicequestion",
+        "name": "Can delete multiple choice question",
+        "content_type": 13
+    },
+    "model": "auth.permission",
+    "pk": 39
+},
+{
+    "fields": {
+        "codename": "add_casestudy",
+        "name": "Can add case study",
+        "content_type": 14
+    },
+    "model": "auth.permission",
+    "pk": 40
+},
+{
+    "fields": {
+        "codename": "change_casestudy",
+        "name": "Can change case study",
+        "content_type": 14
+    },
+    "model": "auth.permission",
+    "pk": 41
+},
+{
+    "fields": {
+        "codename": "delete_casestudy",
+        "name": "Can delete case study",
+        "content_type": 14
+    },
+    "model": "auth.permission",
+    "pk": 42
+},
+{
+    "fields": {
+        "codename": "add_casestudyquestion",
+        "name": "Can add case study question",
+        "content_type": 15
+    },
+    "model": "auth.permission",
+    "pk": 43
+},
+{
+    "fields": {
+        "codename": "change_casestudyquestion",
+        "name": "Can change case study question",
+        "content_type": 15
+    },
+    "model": "auth.permission",
+    "pk": 44
+},
+{
+    "fields": {
+        "codename": "delete_casestudyquestion",
+        "name": "Can delete case study question",
+        "content_type": 15
+    },
+    "model": "auth.permission",
+    "pk": 45
+},
+{
+    "fields": {
+        "codename": "add_learningresource",
+        "name": "Can add learning resource",
+        "content_type": 16
+    },
+    "model": "auth.permission",
+    "pk": 46
+},
+{
+    "fields": {
+        "codename": "change_learningresource",
+        "name": "Can change learning resource",
+        "content_type": 16
+    },
+    "model": "auth.permission",
+    "pk": 47
+},
+{
+    "fields": {
+        "codename": "delete_learningresource",
+        "name": "Can delete learning resource",
+        "content_type": 16
+    },
+    "model": "auth.permission",
+    "pk": 48
+},
+{
+    "fields": {
+        "codename": "add_studentrecord",
+        "name": "Can add student record",
+        "content_type": 17
+    },
+    "model": "auth.permission",
+    "pk": 49
+},
+{
+    "fields": {
+        "codename": "change_studentrecord",
+        "name": "Can change student record",
+        "content_type": 17
+    },
+    "model": "auth.permission",
+    "pk": 50
+},
+{
+    "fields": {
+        "codename": "delete_studentrecord",
+        "name": "Can delete student record",
+        "content_type": 17
+    },
+    "model": "auth.permission",
+    "pk": 51
+},
+{
+    "fields": {
+        "codename": "add_test",
+        "name": "Can add test",
+        "content_type": 18
+    },
+    "model": "auth.permission",
+    "pk": 52
+},
+{
+    "fields": {
+        "codename": "change_test",
+        "name": "Can change test",
+        "content_type": 18
+    },
+    "model": "auth.permission",
+    "pk": 53
+},
+{
+    "fields": {
+        "codename": "delete_test",
+        "name": "Can delete test",
+        "content_type": 18
+    },
+    "model": "auth.permission",
+    "pk": 54
+},
+{
+    "fields": {
+        "codename": "add_testquestiontable",
+        "name": "Can add test question table",
+        "content_type": 19
+    },
+    "model": "auth.permission",
+    "pk": 55
+},
+{
+    "fields": {
+        "codename": "change_testquestiontable",
+        "name": "Can change test question table",
+        "content_type": 19
+    },
+    "model": "auth.permission",
+    "pk": 56
+},
+{
+    "fields": {
+        "codename": "delete_testquestiontable",
+        "name": "Can delete test question table",
+        "content_type": 19
+    },
+    "model": "auth.permission",
+    "pk": 57
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-01-22T14:08:55.865Z",
+        "object_repr": "jesse jesse@gmail.com",
+        "object_id": "3",
+        "change_message": "Changed avatar.",
+        "user": 1,
+        "content_type": 11
+    },
+    "model": "admin.logentry",
+    "pk": 1
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-01-22T14:09:30.426Z",
+        "object_repr": "natsnr natsnr@gmail.com",
+        "object_id": "2",
+        "change_message": "Changed avatar.",
+        "user": 1,
+        "content_type": 11
+    },
+    "model": "admin.logentry",
+    "pk": 2
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-01-22T14:16:04.269Z",
+        "object_repr": "wsgeorge williamsaintgeorge@gmail.com",
+        "object_id": "1",
+        "change_message": "Changed avatar.",
+        "user": 1,
+        "content_type": 11
+    },
+    "model": "admin.logentry",
+    "pk": 3
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-01-22T14:16:36.062Z",
+        "object_repr": "jesse jesse@gmail.com",
+        "object_id": "3",
+        "change_message": "Changed first_name and last_name.",
+        "user": 1,
+        "content_type": 11
+    },
+    "model": "admin.logentry",
+    "pk": 4
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T14:55:45.633Z",
+        "object_repr": "WASSCE - Core English  - A story in which animals are used as characters is a",
+        "object_id": "1",
+        "change_message": "",
+        "user": 1,
+        "content_type": 13
+    },
+    "model": "admin.logentry",
+    "pk": 5
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T14:56:59.385Z",
+        "object_repr": "WASSCE - Core English  - A short, witty statement in verse or prose is an",
+        "object_id": "2",
+        "change_message": "",
+        "user": 1,
+        "content_type": 13
+    },
+    "model": "admin.logentry",
+    "pk": 6
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T14:57:43.256Z",
+        "object_repr": "WASSCE - Core English  - The first public performance of a play is its",
+        "object_id": "3",
+        "change_message": "",
+        "user": 1,
+        "content_type": 13
+    },
+    "model": "admin.logentry",
+    "pk": 7
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T14:58:46.441Z",
+        "object_repr": "WASSCE - Core English  - A short song like poem is",
+        "object_id": "4",
+        "change_message": "",
+        "user": 1,
+        "content_type": 13
+    },
+    "model": "admin.logentry",
+    "pk": 8
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T14:59:37.482Z",
+        "object_repr": "WASSCE - Core English  - One of the elements essential to a novel is",
+        "object_id": "5",
+        "change_message": "",
+        "user": 1,
+        "content_type": 13
+    },
+    "model": "admin.logentry",
+    "pk": 9
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T15:00:19.286Z",
+        "object_repr": "Literature",
+        "object_id": "2",
+        "change_message": "",
+        "user": 1,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 10
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T15:01:01.680Z",
+        "object_repr": "2014 Core English 2",
+        "object_id": "2",
+        "change_message": "",
+        "user": 1,
+        "content_type": 18
+    },
+    "model": "admin.logentry",
+    "pk": 11
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T15:02:57.433Z",
+        "object_repr": "2014 Core English 1",
+        "object_id": "1",
+        "change_message": "",
+        "user": 1,
+        "content_type": 19
+    },
+    "model": "admin.logentry",
+    "pk": 12
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T15:03:06.785Z",
+        "object_repr": "2014 Core English 2",
+        "object_id": "2",
+        "change_message": "",
+        "user": 1,
+        "content_type": 19
+    },
+    "model": "admin.logentry",
+    "pk": 13
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T15:03:16.230Z",
+        "object_repr": "2014 Core English 3",
+        "object_id": "3",
+        "change_message": "",
+        "user": 1,
+        "content_type": 19
+    },
+    "model": "admin.logentry",
+    "pk": 14
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T15:03:26.016Z",
+        "object_repr": "2014 Core English 4",
+        "object_id": "4",
+        "change_message": "",
+        "user": 1,
+        "content_type": 19
+    },
+    "model": "admin.logentry",
+    "pk": 15
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-01-22T15:03:42.976Z",
+        "object_repr": "2014 Core English 5",
+        "object_id": "5",
+        "change_message": "",
+        "user": 1,
+        "content_type": 19
+    },
+    "model": "admin.logentry",
+    "pk": 16
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-01-22T15:05:54.700Z",
+        "object_repr": "Literature in English",
+        "object_id": "2",
+        "change_message": "Changed name.",
+        "user": 1,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 17
+}
+]

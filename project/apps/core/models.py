@@ -4,6 +4,11 @@ import uuid
 from django.conf import settings
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
 
+from django.db.models.signals import post_save, pre_save
+from django.conf import settings
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
+
 # Create your models here.
 class TimeStampedModel(models.Model):
 	"""
@@ -15,13 +20,15 @@ class TimeStampedModel(models.Model):
 	class Meta:
 		abstract = True
 
-
 class Topic(TimeStampedModel):
 	"""
 	A unit of organisation that groups LearningContent into themes
 	a student can request
 	"""
 	name = models.CharField(max_length=128, unique=False, null=True)
+
+	def __unicode__(self):
+		return self.name
 
 class Exam(TimeStampedModel):
 	"""
@@ -30,12 +37,18 @@ class Exam(TimeStampedModel):
 	name = models.CharField(max_length=128, unique=False, null=True)
 	short_name = models.CharField(max_length=10, unique=False, null=True)
 
+	def __unicode__(self):
+		return "{} - {}".format(self.short_name, self.name)
+
 class Paper(TimeStampedModel):
 	"""
 	A paper belonging to an exam
 	"""
 	name = models.CharField(max_length=128, unique=False, null=True)
 	code = models.CharField(max_length=20, unique=False, null=True)
+
+	def __unicode__(self):
+		return "{} - {}".format(self.code, self.name)
 
 class UserManager(BaseUserManager):
 
@@ -65,6 +78,7 @@ class User(AbstractBaseUser):
 	email = models.EmailField(verbose_name='email address', max_length=255, unique=True, blank=False, null=True)
 	first_name = models.CharField(max_length=255, unique=False, blank=True, null=True)
 	last_name = models.CharField(max_length=255, unique=False, blank=True, null=True)
+	avatar = models.FileField(upload_to='media_uploads', default=None, blank=True, null=True)
 	is_active = models.BooleanField(default=True)
 	is_admin = models.BooleanField(default=False)
 	objects = UserManager()
@@ -94,6 +108,11 @@ class User(AbstractBaseUser):
 	def is_staff(self):
 		return self.is_admin
 
+# post save user to add auth token
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+	if created:
+		Token.objects.create(user=instance)
 
 
 

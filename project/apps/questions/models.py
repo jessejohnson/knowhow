@@ -39,6 +39,9 @@ class MultipleChoiceQuestion(BaseQuestion):
 	option_d = models.CharField(max_length=250, default=None, blank=True, null=True)
 	option_e = models.CharField(max_length=250, default=None, blank=True, null=True)
 	answer = models.CharField(max_length=3, choices=OPTIONS, default=None, blank=True, null=True)
+
+	def __unicode__(self):
+		return "{} - {} - {}".format(self.exam.short_name, self.paper.name, self.question)
 		
 class CaseStudy(BaseQuestion):
 	"""

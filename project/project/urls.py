@@ -8,13 +8,15 @@ from apps.core.views import SignUpView
 from apps.core.views import GetUserView
 from apps.tests.views import TakeTestView
 
+from apps.core.views import IndexTemplateView
+
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api/v1.0/', include(router.urls)),
+    url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api-token-auth/', views.obtain_auth_token),
 
@@ -22,4 +24,5 @@ urlpatterns = patterns('',
     url(r'api/signup/', SignUpView.as_view()),
     url(r'api/taketest/', TakeTestView.as_view()),
     url(r'api/getuser/', GetUserView.as_view()),
+    url(r'^$', IndexTemplateView.as_view()),
 )

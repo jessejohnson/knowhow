@@ -19,13 +19,13 @@ class Test(TimeStampedModel):
 	# 	super(Test, self).save(*args, **kwargs)
 
 	def __unicode__(self):
-		return self.name + " " + self.id
+		return self.name + " " + str(self.id)
 
 class TestQuestionTable(TimeStampedModel):
 	"""
 	A table containing questions and their related tests in order
 	"""
-	name = models.CharField(max_length=128, unique=False, null=True)
+	name = models.CharField(max_length=128, default='name', unique=False, null=True)
 	test = models.ForeignKey('Test', default=None, blank=True, null=True)
 	question = models.ForeignKey('questions.MultipleChoiceQuestion', default=None, blank=True, null=True)
 	question_number = models.PositiveIntegerField(default=None, blank=True, null=True)
@@ -33,4 +33,7 @@ class TestQuestionTable(TimeStampedModel):
 	def save(self, *args, **kwargs):
 		#prefill name
 		self.name = self.test.name + " " + str(self.question_number)
-		super(TestTable, self).save(*args, **kwargs)
+		super(TestQuestionTable, self).save(*args, **kwargs)
+
+	def __unicode__(self):
+		return self.name

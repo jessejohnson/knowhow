@@ -10,11 +10,19 @@ class TestSerializer(serializers.HyperlinkedModelSerializer):
 
 	class Meta:
 		model = Test
-		fields = ('id', 'url', 'exam', 'topic' ,'paper', 'name', 'slug',)
+		fields = ('id', 'url', 'exam', 'topic' ,'paper', 'name',)
 
 class TestQuestionTableSerializer(serializers.HyperlinkedModelSerializer):
 	question = MultipleChoiceQuestionSerializer(many=False, read_only=True)
+	test = TestSerializer(many=False, read_only=True)
 
 	class Meta:
 		model = TestQuestionTable
-		fields = ('id', 'url', 'test', 'question' ,'question_number', 'name', 'slug',)
+		fields = ('id', 'url', 'test', 'question' ,'question_number', 'name',)
+
+class TakeTestSerializer(serializers.HyperlinkedModelSerializer):
+	test = TestSerializer(many=False, read_only=True)
+
+	class Meta:
+		model = Test
+		fields = ('test',)

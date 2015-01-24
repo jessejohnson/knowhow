@@ -13,3 +13,6 @@ class StudentRecord(TimeStampedModel):
 		#prefill name
 		self.name = self.user.username + " " + self.test.name
 		super(StudentRecord, self).save(*args, **kwargs)
+
+	def __unicode__(self):
+		return self.name

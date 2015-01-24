@@ -1,5 +1,7 @@
 # from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
+from django.views.generic import TemplateView
+
 from rest_framework import viewsets, generics
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny, IsAdminUser, IsAuthenticatedOrReadOnly, IsAuthenticated
@@ -10,6 +12,22 @@ from .models import Topic, Exam, Paper, User
 from .permissions import IsUserOrReadOnly
 
 # Create your views here.
+class IndexTemplateView(TemplateView):
+	"""index of prepGH"""
+
+	template_name = "index.html"
+
+	# def get_context_data(self, **kwargs):
+	# 	context = super(IndexTemplateView, self).get_context_data(**kwargs)
+	# 	try:
+	# 		context['choir'] = Choir.objects.latest('modified')
+	# 		context['concert'] = Concert.objects.latest('time')
+	# 		context['column'] = Column.objects.latest('created')
+	# 	except Exception, e:
+	# 		pass
+	# 	return context
+
+
 class UserViewSet(viewsets.ModelViewSet):
 	"""
 	API endpoint that allows users to be viewed and edited
@@ -28,7 +46,7 @@ class SignUpView(generics.CreateAPIView):
 
 class GetUserView(generics.RetrieveAPIView):
 	"""
-	Get a single user instance based on username
+	Get a single user instance based on email
 	"""
 	queryset = User.objects.all()
 	serializer_class = UserSerializer
@@ -36,8 +54,8 @@ class GetUserView(generics.RetrieveAPIView):
 
 	def get_object(self):
 		queryset = self.get_queryset()
-		username = self.request.query_params.get('username')
-		user = get_object_or_404(queryset, username=username)
+		email = self.request.query_params.get('email')
+		user = get_object_or_404(queryset, email=email)
 		return user
 
 class TopicViewSet(viewsets.ModelViewSet):
