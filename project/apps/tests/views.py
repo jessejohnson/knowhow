@@ -17,7 +17,7 @@ class TestQuestionTableViewSet(viewsets.ModelViewSet):
 	serializer_class = TestQuestionTableSerializer
 	permission_classes = (permissions.IsAuthenticated,)
 
-class TakeTestView(generics.RetrieveAPIView):
+class TakeTestView(generics.ListAPIView):
 	"""
 	Loads a test for a student to take
 	"""
@@ -29,10 +29,10 @@ class TakeTestView(generics.RetrieveAPIView):
 		Retrieve all the questions belonging to a specific test
 		provided by the param test_id in order
 		"""
-		queryset = self.get_queryset()
-		email = self.request.query_params.get('email')
-		test = get_object_or_404(queryset, email=email)
-		return test
-		# test_id = self.request.query_params.get('test_id', None)
-		# queryset = TestQuestionTable.objects.filter(test_id=test_id).order_by("question_number")
-		# return queryset
+		# queryset = self.get_queryset()
+		# email = self.request.query_params.get('email')
+		# test = get_object_or_404(queryset, email=email)
+		# return test
+		test_id = self.request.query_params.get('test_id', None)
+		queryset = TestQuestionTable.objects.filter(test_id=test_id).order_by("question_number")
+		return queryset
